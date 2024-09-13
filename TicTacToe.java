@@ -22,9 +22,6 @@ public class TicTacToe {
             if (isWinner()) {
                 System.out.println("Player " + currentPlayer + " wins!");
                 break;
-            } else if (isBoardFull()) {
-                System.out.println("It's a draw!");
-                break;
             }
 
             // Switch player
@@ -112,17 +109,5 @@ public class TicTacToe {
         }
 
         return false;
-    }
-
-    // Check if the board is full
-    public static boolean isBoardFull() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (board[i][j] == ' ') {
-                    return false;
-                }
-            }
-        }
-        return true;
     }
 }
